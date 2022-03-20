@@ -8,9 +8,6 @@ const authentication = function(req,res,next){
         let decodedToken = jwt.verify(token,"Project_1")
         if(!decodedToken)
         return res.status(401).send({status:false,msg:"Token is invalid"})
-        // let authorId = decodedToken.authorId
-        // req.authorId = authorId
-
     next()
     }
     catch(error)
